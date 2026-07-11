@@ -1,4 +1,8 @@
 import { db } from "../firebase.js";
+import { createRequire } from 'module';
+
+var require = createRequire(import.meta.url);
+var module = { exports: {} };
 
 const lecturersRef = db.collection("lecturers");
 

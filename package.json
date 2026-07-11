@@ -4,9 +4,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
-    "test": "echo \"no tests yet\" && exit 0"
+    "dev": "node init && nodemon index.js",
+    "start": "node init && node dist/index.js",
+    "test": "echo \"no tests yet\" && exit 0",
+    "build": "node init && mkdir -p dist && cp -r index.js models routes firebase.js package.json dist/"
   },
   "author": "",
   "license": "ISC",
